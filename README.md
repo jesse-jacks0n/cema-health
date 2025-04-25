@@ -11,7 +11,9 @@ A FastAPI backend for managing health programs and client enrollments. This syst
 
 Check out system demo video:
 
-https://github.com/jesse-jacks0n/cema-health/blob/master/demo.mp4
+https://github.com/jesse-jacks0n/cema-health/blob/master/demo.mkv
+
+DEMO video also included in powerpoint presentation
 
 ## Features
 
@@ -99,7 +101,7 @@ pytest tests/
 ├── .env               # Environment variables
 ├── main.py           # Application entry point
 ├── requirements.txt  # Python dependencies
-├── demo.mp4         # Demo video
+├── demo.mkv         # Demo video
 └── README.md        # Documentation
 ```
 
