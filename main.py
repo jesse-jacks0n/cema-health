@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app import models, database, api
 from dotenv import load_dotenv
+import os
 
 # Load environment variables
 load_dotenv()
@@ -16,22 +17,21 @@ app = FastAPI(
 )
 
 # Configure CORS
+origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=origins,  # Uses environment variable or defaults to localhost:3000
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Include API routes
 app.include_router(api.router, prefix="/api/v1")
 
-
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
-
+    return {"message": "Welcome to CEMA Health API"}
 
 @app.get("/hello/{name}")
 async def say_hello(name: str):
