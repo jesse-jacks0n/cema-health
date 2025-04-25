@@ -16,6 +16,10 @@ https://github.com/jesse-jacks0n/cema-health/blob/master/demo.mkv
 
 DEMO video also included in powerpoint presentation
 
+## Test Coverage
+
+![Test Results](tests.png)
+
 ## Features
 
 - Create and manage health programs (TB, HIV, Malaria, etc.)
