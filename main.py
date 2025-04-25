@@ -20,7 +20,8 @@ app = FastAPI(
 origins = [
     "http://localhost:3000",
     "http://localhost:5173",
-    "https://cema-health.onrender.com"
+    "https://cema-health.onrender.com",
+    "https://cemafrontend.web.app"
 ]
 
 app.add_middleware(
